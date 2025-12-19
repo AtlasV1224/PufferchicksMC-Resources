@@ -1,0 +1,87 @@
+{
+	"credit": "Made with Blockbench",
+	"textureSize": [64, 32],
+	"texture": "chicken5",
+	"models": [
+		{
+			"part": "head",
+			"id": "head",
+			"invertAxis": "xy",
+			"translate": [0, -9, 4],
+			"boxes": [
+				{"coordinates": [-2, 7, -5, 4, 4, 3], "textureOffset": [10, 7]},
+				{"coordinates": [-2, 11, -6, 4, 4, 3], "textureOffset": [10, 0]},
+				{"coordinates": [-2, 11, -3, 4, 3, 1], "textureOffset": [0, 4]},
+				{"coordinates": [-2, 11, -7, 4, 3, 1], "textureOffset": [0, 0]}
+			]
+		},
+		{
+			"part": "bill",
+			"id": "bill",
+			"invertAxis": "xy",
+			"translate": [0, -9, 4],
+			"boxes": [
+				{"coordinates": [-1, 11, -10, 2, 2, 3], "textureOffset": [25, 20]}
+			]
+		},
+		{
+			"part": "chin",
+			"id": "chin",
+			"invertAxis": "xy",
+			"translate": [0, -9, 4]
+		},
+		{
+			"part": "body",
+			"id": "body",
+			"invertAxis": "xy",
+			"translate": [0, -8, 0],
+			"rotate": [-90, 0, 0],
+			"boxes": [
+				{"coordinates": [-3, 4, -4, 6, 8, 6], "textureOffset": [0, 14]}
+			],
+			"animations": [
+				{
+					"this.rx": 0
+				}
+			]
+		},
+		{
+			"part": "left_wing",
+			"id": "left_wing",
+			"invertAxis": "xy",
+			"translate": [4, -11, 0],
+			"boxes": [
+				{"coordinates": [-4, 7, -2, 1, 3, 3], "textureOffset": [24, 0]}
+			]
+		},
+		{
+			"part": "right_wing",
+			"id": "right_wing",
+			"invertAxis": "xy",
+			"translate": [-4, -11, 0],
+			"boxes": [
+				{"coordinates": [3, 7, -2, 1, 3, 3], "textureOffset": [24, 6]}
+			]
+		},
+		{
+			"part": "left_leg",
+			"id": "left_leg",
+			"invertAxis": "xy",
+			"translate": [1, -5, -1],
+			"boxes": [
+				{"coordinates": [-3, 0, -3, 3, 3, 3], "textureOffset": [21, 12]},
+				{"coordinates": [-3, 3, -2, 3, 1, 3], "textureOffset": [32, 0]}
+			]
+		},
+		{
+			"part": "right_leg",
+			"id": "right_leg",
+			"invertAxis": "xy",
+			"translate": [-2, -5, -1],
+			"boxes": [
+				{"coordinates": [0, 0, -3, 3, 3, 3], "textureOffset": [21, 12]},
+				{"coordinates": [0, 3, -2, 3, 1, 3], "textureOffset": [32, 6]}
+			]
+		}
+	]
+}
