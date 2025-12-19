@@ -1,0 +1,20 @@
+name = "admin"
+
+[[parents]]
+  group = "elevated"
+
+[[prefixes]]
+  prefix = "&5[OP] "
+  priority = 10
+
+[[permissions]]
+  permission = "displayname.OP"
+  value = true
+
+[[permissions]]
+  permission = "weight.10"
+  value = true
+
+[[permissions]]
+  permission = "luckperms.autoop"
+  value = true

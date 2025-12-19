@@ -1,0 +1,29 @@
+name = "default"
+
+[[permissions]]
+  permission = "displayname.Pufferchick"
+  value = true
+
+[[permissions]]
+  permission = "weight.0"
+  value = true
+
+[[permissions]]
+  permission = "command.data.get"
+  value = true
+
+[[permissions]]
+  permission = "command.seed"
+  value = true
+
+[[permissions]]
+  permission = "command.tick"
+  value = true
+
+[[permissions]]
+  permission = "command.wits"
+  value = true
+
+[[permissions]]
+  permission = "ping"
+  value = true
