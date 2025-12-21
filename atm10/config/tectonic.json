@@ -35,7 +35,7 @@
   "global_terrain": {
     "elevation_boost": 0.0,
     "lava_tunnels": true,
-    "max_y": 416,
+    "max_y": 320,
     "min_y": -64,
     "ultrasmooth": false,
     "vertical_scale": 1.125
