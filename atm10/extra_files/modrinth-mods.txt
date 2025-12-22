@@ -8,7 +8,7 @@ sdlink:VADIv5pg
 # Community mods
 create-additional-logistics:mbCi448E
 echo-of-death:HdyZLCDq
-freeze-block:WfL7dS4O
+#freeze-block:WfL7dS4O
 sculk-muffler:pBOUMY5q
 
 # Server+Client Additions
