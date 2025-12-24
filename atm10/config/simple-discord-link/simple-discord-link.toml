@@ -128,7 +128,7 @@
 	#Should whitelist changes be posted to discord
 	whitelistChanged = false
 	#Commands that should not be broadcast to discord
-	ignoredCommands = ["particle", "login", "execute", "sdconfigeditor", "save-all", "save-on", "save-off", "msg", "gamerule", "chunky", "nbt", "wits", "neoforge", "home", "back", "sgear_mats", "sgear_parts", "sgear_traits", "sethome", "tell"]
+	ignoredCommands = ["particle", "login", "execute", "sdconfigeditor", "save-all", "save-on", "save-off", "msg", "gamerule", "chunky", "nbt", "wits", "neoforge", "home", "back", "sgear_mats", "sgear_parts", "sgear_traits", "sethome", "tell", "spawn"]
 	#Allow mentioning discord roles and users from Minecraft Chat
 	allowMentionsFromChat = false
 

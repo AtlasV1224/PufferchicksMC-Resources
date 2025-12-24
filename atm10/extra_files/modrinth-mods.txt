@@ -2,6 +2,7 @@
 bluemap:8iJcPOHJ
 chunky:LuFhm4eU
 chunkyborder:Pj0tqKnE
+log-begone:1OrkaiPD
 luckperms:dKAPoPGd
 sdlink:VADIv5pg
 
@@ -12,5 +13,14 @@ echo-of-death:HdyZLCDq
 sculk-muffler:pBOUMY5q
 
 # Server+Client Additions
+charm-of-undying:bfg1ghkD
+create-ultimine:66tIOKDZ
+elytra-slot:RX6A02W1
+emi:ouSj7NfF
+emi-loot:LNBoaKYt
+emi-ores:1jY6MIrK
 etched:MFq0jvUW
+hooked:Jwdpo3CR
+mech-trowel:idzymFGn
+refined-storage-emi-integration:zpz6Pcxn
 tectonic:fTPmbv20
