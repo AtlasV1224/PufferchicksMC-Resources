@@ -174,9 +174,9 @@
 		#The Channel the message will be delivered to. Valid entries are CHAT, EVENT, CONSOLE, OVERRIDE
 		channel = "CHAT"
 		#Should the message be sent using EMBED style messages
-		useEmbed = false
+		useEmbed = true
 		#Embed Layout to use
-		embedLayout = "default"
+		embedLayout = "chat"
 		#Override the destination with a custom channel/webhook url. Make sure to change `channel` above to OVERRIDE
 		override = ""
 

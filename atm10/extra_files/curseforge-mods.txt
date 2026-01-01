@@ -1,2 +1,1 @@
 ftb-chunks-for-bluemap
-leaderboards
