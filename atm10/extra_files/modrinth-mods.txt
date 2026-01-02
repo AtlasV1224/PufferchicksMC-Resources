@@ -15,7 +15,7 @@ sculk-muffler:pBOUMY5q
 # Server+Client Additions
 charm-of-undying:bfg1ghkD
 create-ultimine:66tIOKDZ
-distanthorizons:bLPLghy9
+#distanthorizons:bLPLghy9
 elytra-slot:RX6A02W1
 emi:ouSj7NfF
 emi-loot:LNBoaKYt
