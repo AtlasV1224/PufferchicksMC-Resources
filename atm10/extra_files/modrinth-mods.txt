@@ -25,3 +25,7 @@ hooked:Jwdpo3CR
 mech-trowel:jXStR8CX
 refined-storage-emi-integration:zpz6Pcxn
 tectonic:fTPmbv20
+
+# Dependencies
+craterlib:cBhYL3vy
+librarianlib:cjdV1zT2

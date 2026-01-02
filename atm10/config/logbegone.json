@@ -1,7 +1,7 @@
 {
   "logbegone": {
     "phrases": [
-      "FTBChunks-BlueMap-Updater/INFO",
+      "updateDimensionClaims",
       "DistantHorizons-DistantHorizons-loaderCommon.neoforge.com.seibel.distanthorizons.common.wrappers.worldGeneration.mimicObject.DhLitWorldGenRegion"
     ],
     "regex": [
