@@ -101,3 +101,59 @@ file = "kubejs/server_scripts/puffercoin_recipes.js"
 
 [[files]]
 file = "kubejs/startup_scripts/puffercoin.js"
+
+[[files]]
+file = "mods/charm-of-undying.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/create-additional-logistics.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/create-ultimine.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/echo-of-death.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/elytra-slot.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/emi-loot.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/emi-ores.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/emi.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/etched.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/hooked.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/librarianlib.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/mech-trowel.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/refined-storage-emi-integration.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/sculk-muffler.pw.toml"
+metafile = true
