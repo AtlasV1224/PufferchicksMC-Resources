@@ -1,0 +1,14 @@
+# Dependency directories
+node_modules/
+
+# Repository files
+/README.md
+
+# Server only
+extra_files
+resourcepack
+
+# Development only
+.envrc
+package.json
+package-lock.json

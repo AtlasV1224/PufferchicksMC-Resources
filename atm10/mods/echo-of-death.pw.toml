@@ -1,0 +1,14 @@
+name = "Echo of Death"
+filename = "kittycatcasey_echoofdeath-1.21.1-1.0.0.jar"
+side = "both"
+pin = true
+
+[download]
+url = "https://cdn.modrinth.com/data/p0lx0alG/versions/HdyZLCDq/kittycatcasey_echoofdeath-1.21.1-1.0.0.jar"
+hash-format = "sha512"
+hash = "f4fdc7a31793f56d7d2862951ab057d2c8368de8f8cb88a6132d0e78cb7d41b548de8e6c0a13d4191d2e3587198bb130ab3c2b715de315a872d203910e1b2aa4"
+
+[update]
+[update.modrinth]
+mod-id = "p0lx0alG"
+version = "HdyZLCDq"

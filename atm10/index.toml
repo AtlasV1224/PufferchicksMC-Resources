@@ -1,0 +1,195 @@
+hash-format = "sha256"
+
+[[files]]
+file = "config/bluemap/core.conf"
+
+[[files]]
+file = "config/bluemap/maps/world.conf"
+
+[[files]]
+file = "config/bluemap/maps/world_the_end.conf"
+
+[[files]]
+file = "config/bluemap/maps/world_the_nether.conf"
+
+[[files]]
+file = "config/bluemap/maps/world_the_other.conf"
+
+[[files]]
+file = "config/bluemap/storages/sql.conf"
+
+[[files]]
+file = "config/bluemap/webapp.conf"
+
+[[files]]
+file = "config/chunky/config.json"
+
+[[files]]
+file = "config/chunkyborder/borders.json"
+
+[[files]]
+file = "config/chunkyborder/config.json"
+
+[[files]]
+file = "config/cristellib/dungeons_arise/structure_toggle_config.json5"
+
+[[files]]
+file = "config/ftbchunksbluemap-common.toml"
+
+[[files]]
+file = "config/iceandfire/iaf-common.json"
+
+[[files]]
+file = "config/logbegone.json"
+
+[[files]]
+file = "config/luckperms/luckperms.conf"
+
+[[files]]
+file = "config/luckperms/toml-storage/groups/admin.toml"
+
+[[files]]
+file = "config/luckperms/toml-storage/groups/default.toml"
+
+[[files]]
+file = "config/simple-discord-link/simple-discord-compat.toml"
+
+[[files]]
+file = "config/simple-discord-link/simple-discord-link.toml"
+
+[[files]]
+file = "config/supplementaries-common.toml"
+
+[[files]]
+file = "config/tectonic.json"
+
+[[files]]
+file = "kubejs/assets/puffercoin/textures/item/coin_0.png"
+
+[[files]]
+file = "kubejs/assets/puffercoin/textures/item/coin_1.png"
+
+[[files]]
+file = "kubejs/assets/puffercoin/textures/item/coin_2.png"
+
+[[files]]
+file = "kubejs/assets/puffercoin/textures/item/coin_3.png"
+
+[[files]]
+file = "kubejs/assets/puffercoin/textures/item/coin_4.png"
+
+[[files]]
+file = "kubejs/assets/puffercoin/textures/item/coin_5.png"
+
+[[files]]
+file = "kubejs/client_scripts/puffercoin_tooltip.js"
+
+[[files]]
+file = "kubejs/server_scripts/misc_recipes.js"
+
+[[files]]
+file = "kubejs/server_scripts/nbt_command.js"
+
+[[files]]
+file = "kubejs/server_scripts/no_click_seats.js"
+
+[[files]]
+file = "kubejs/server_scripts/puffercoin_loot.js"
+
+[[files]]
+file = "kubejs/server_scripts/puffercoin_recipes.js"
+
+[[files]]
+file = "kubejs/startup_scripts/puffercoin.js"
+
+[[files]]
+file = "mods/bluemap.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/charm-of-undying.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/chunky.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/chunkyborder.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/craterlib.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/create-additional-logistics.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/create-ultimine.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/echo-of-death.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/elytra-slot.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/emi-loot.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/emi-ores.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/emi.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/etched.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/hooked.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/librarianlib.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/log-begone.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/lootjs.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/luckperms.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/mech-trowel.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/refined-storage-emi-integration.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/sculk-muffler.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/sdlink.pw.toml"
+metafile = true
+
+[[files]]
+file = "mods/tectonic.pw.toml"
+metafile = true
