@@ -2,251 +2,194 @@ hash-format = "sha256"
 
 [[files]]
 file = "config/bluemap/core.conf"
-hash = "93bee69d7c0b3ae73966fef4e1f02182fdd5bb8851c41dfa9b88e7ec19fdcdd6"
 
 [[files]]
 file = "config/bluemap/maps/world.conf"
-hash = "d0baef813a8e8adeaab616e019d4abef7170b31c240296d31abd7fa99ee57eb2"
 
 [[files]]
 file = "config/bluemap/maps/world_the_end.conf"
-hash = "c3429e0aa5dd218f599e208a9cc3a78fd7077ea4fc5a385a12d35e379c93ac99"
 
 [[files]]
 file = "config/bluemap/maps/world_the_nether.conf"
-hash = "1ca4488b6a17059bff3a8d8d202ef046927d087c2e345474f9bac4dee5e5851c"
 
 [[files]]
 file = "config/bluemap/maps/world_the_other.conf"
-hash = "293d048cc37c2e2a4386af9050e98a93828bc6bcc5efeb4fcae82794f2323411"
 
 [[files]]
 file = "config/bluemap/storages/sql.conf"
-hash = "fec077f9523c60ccfdda9da2c46d7ccd2caf6b20c1670955625e414b7fb6890b"
 
 [[files]]
 file = "config/bluemap/webapp.conf"
-hash = "7b6db9a73aaa29d7b7a32a6e40654a36ff826f4e13e0188878022fa5fc0112c0"
 
 [[files]]
 file = "config/chunky/config.json"
-hash = "93d99c3d17bde447fbebd5cde4c6f4cc86c55c9f16adbf5266463aa68e46ba33"
 
 [[files]]
 file = "config/chunkyborder/borders.json"
-hash = "c548e3f25a0c43440a9b03bcafdbc98283a2a0f09c0e6ef1bc368a145eb27015"
 
 [[files]]
 file = "config/chunkyborder/config.json"
-hash = "ea57ed1927d66095131a26bef1eedb1187c8a00343511084852c96c4a8de3121"
 
 [[files]]
 file = "config/cristellib/dungeons_arise/structure_toggle_config.json5"
-hash = "876225e0f724085d49a42358c3728ed838c19a465399d7fb36be8d6ddd155388"
 
 [[files]]
 file = "config/ftbchunksbluemap-common.toml"
-hash = "d6821dfb63b0b071dd7e7d7456bc38e7ed8c64b8bde0d43656dcdc5a1b81b076"
 
 [[files]]
 file = "config/iceandfire/iaf-common.json"
-hash = "3e2d2f5055e4c39ef76adf3918b22fcc9026ef9c63587d8103690caf9fdb57f6"
 
 [[files]]
 file = "config/logbegone.json"
-hash = "843ef836de9c864b5150cfe7978d4355c55aeacae6c25cb985c7ded6b4a4d015"
 
 [[files]]
 file = "config/luckperms/luckperms.conf"
-hash = "5fd276e23b33dc1e92f0f324f073ab72fa58a9199ee82d258b08876df19f9902"
 
 [[files]]
 file = "config/luckperms/toml-storage/groups/admin.toml"
-hash = "6340ce2ecfa198c2366777f216ddff1f8e2d6f857f916733dd430e1f205511bd"
 
 [[files]]
 file = "config/luckperms/toml-storage/groups/default.toml"
-hash = "47c092dd626badef03c62a9f42b334d4a0ec142f326328c2a81c0893418d7351"
 
 [[files]]
 file = "config/simple-discord-link/simple-discord-compat.toml"
-hash = "48b3f008a78e06cb1957132ce9ca8da31688f221ef7695372a98b97ee995eb90"
 
 [[files]]
 file = "config/simple-discord-link/simple-discord-link.toml"
-hash = "e1c07d3ae435888cbe1b89042c3f40e76fbb1fcb64b6e909403160fe35961c5b"
 
 [[files]]
 file = "config/supplementaries-common.toml"
-hash = "1dbbd7b9ad3cc8e6e45b42b3140fb9366bc0833982be19e9767a47134548a0c2"
 
 [[files]]
 file = "config/tectonic.json"
-hash = "16f898deada25607df02153b4c63eb9343619879f38d36c3213e07175e784419"
 
 [[files]]
 file = "kubejs/assets/puffercoin/textures/item/coin_0.png"
-hash = "18d168c5bd5acfffa69298b48fd57540c5bf0a8417a54824d01c38d94f9a8287"
 
 [[files]]
 file = "kubejs/assets/puffercoin/textures/item/coin_1.png"
-hash = "db3794c23d88fea93cab5fb4b96f6dd5d9303145735bfe77277f12d26f99104f"
 
 [[files]]
 file = "kubejs/assets/puffercoin/textures/item/coin_2.png"
-hash = "363cf1e6a27dc16dbfe6b375dc2190e4656b31d2025fc3c45d55f4c771f0a429"
 
 [[files]]
 file = "kubejs/assets/puffercoin/textures/item/coin_3.png"
-hash = "e5d4b2ef43464bd9c43cd8551f2065ecd4fd4ff2f2066735cd963ecd653393a0"
 
 [[files]]
 file = "kubejs/assets/puffercoin/textures/item/coin_4.png"
-hash = "7befd3714cf0a00f9c6863c30a11b88ec370097a3dbfbe85f87137c3183d0dbf"
 
 [[files]]
 file = "kubejs/assets/puffercoin/textures/item/coin_5.png"
-hash = "7c968ca2267a61bf9aa60d1c77be9e55b785df08eebc81f738e1cfa3926127b5"
 
 [[files]]
 file = "kubejs/client_scripts/puffercoin_tooltip.js"
-hash = "4aee2b3ecb39ef1b19ddcc5d297aecdf4b3ded6e77ee1f97ea95a601f0c6ad24"
 
 [[files]]
 file = "kubejs/server_scripts/misc_recipes.js"
-hash = "415ba29616795f002e5f249f8b51c873130093e25bd32f90f265f7adff7fde6a"
 
 [[files]]
 file = "kubejs/server_scripts/nbt_command.js"
-hash = "2ed170c8de938939d226c33ddaba12bac4ce9868adc97bd98425e6d976e4be82"
 
 [[files]]
 file = "kubejs/server_scripts/no_click_seats.js"
-hash = "2cac2ac4592a388bf3c93c9c6f77483b10a61e929ea5869916ef679f490088b9"
 
 [[files]]
 file = "kubejs/server_scripts/puffercoin_loot.js"
-hash = "a8e3bfc94da665f0f14ebb9a0eda0dcbf8683b9a2be866a8b750ef46c2f5961e"
 
 [[files]]
 file = "kubejs/server_scripts/puffercoin_recipes.js"
-hash = "af944c59c250f6475dff18e9a07ecc225b4308bbdcfe8100d925be8c81700f99"
 
 [[files]]
 file = "kubejs/startup_scripts/puffercoin.js"
-hash = "3bd407c86b2c55fbc061476fbb5590c368781f35f8ae6db8d21e7c3d31fa8f99"
 
 [[files]]
 file = "mods/bluemap.pw.toml"
-hash = "f33a4720ef4f315b6d1f778039e9f7bdb8f5ef1b58a57d565c30fd1d8adee207"
 metafile = true
 
 [[files]]
 file = "mods/charm-of-undying.pw.toml"
-hash = "f280232365209495c645a16b9684ab13d3bb17601d8bdd11014df609fa6b3299"
 metafile = true
 
 [[files]]
 file = "mods/chunky.pw.toml"
-hash = "68cc51e721e993a8b7a2cbaf45369933b22b07a9c82327ab14757ee10684aa81"
 metafile = true
 
 [[files]]
 file = "mods/chunkyborder.pw.toml"
-hash = "a850e8ecd6c32480b8369db9823af1ac200e62a8662b43c58ebb740cdac66387"
 metafile = true
 
 [[files]]
 file = "mods/craterlib.pw.toml"
-hash = "071612d3137f7587bcd2065419cb5a83b908e08de6f68caded55f9f83ae5fb7c"
 metafile = true
 
 [[files]]
 file = "mods/create-additional-logistics.pw.toml"
-hash = "b2566e7f4b07548ac068ed4c7b36493a5a9fe5c2cb73612d18a2ca4cd877d9fc"
 metafile = true
 
 [[files]]
 file = "mods/create-ultimine.pw.toml"
-hash = "07dcfac504c729496ec57119d5f6a47ed62aea64c48e56518c8ba9908bbbefb1"
 metafile = true
 
 [[files]]
 file = "mods/echo-of-death.pw.toml"
-hash = "cae019ffd371fff2ab57b21169cd4ab1275482c7552901325772c9464ede5aaf"
 metafile = true
 
 [[files]]
 file = "mods/elytra-slot.pw.toml"
-hash = "29ba96bbbbea33d626715c7c8b053e568c02d38d9a3ecef7a74742ef17b6727a"
 metafile = true
 
 [[files]]
 file = "mods/emi-loot.pw.toml"
-hash = "6e26c27192c9ea3eefad8fc896c37fb9d5eac400feb63e3190c78f796c769a2c"
 metafile = true
 
 [[files]]
 file = "mods/emi-ores.pw.toml"
-hash = "bf60fa0a52c295976fccb3c495c85ae5f65eda1e736c765f63e3bb14420c9b4e"
 metafile = true
 
 [[files]]
 file = "mods/emi.pw.toml"
-hash = "6f11f0588ca7ce42111d2fbea49c1a98943e1e1d83b58a53cac3379e438fdf93"
 metafile = true
 
 [[files]]
 file = "mods/etched.pw.toml"
-hash = "bd159b2ef7baf5a1a0e33dc073bf98bbc610219a3c8fa7a047eaa73b84076946"
 metafile = true
 
 [[files]]
 file = "mods/hooked.pw.toml"
-hash = "83f27548c6e8b743a99f34063168592a7b70b354661bb72d8b3ce7ac2d4ca336"
 metafile = true
 
 [[files]]
 file = "mods/librarianlib.pw.toml"
-hash = "5c5a90bf3845d79b3f943a52de8619b245b0a5d7535f407c2a22444795c60dbc"
 metafile = true
 
 [[files]]
 file = "mods/log-begone.pw.toml"
-hash = "a99ba0deb12a2575f0c76db0d31e82b1770461a0e5ef6aafc19d605940e19f6e"
 metafile = true
 
 [[files]]
 file = "mods/lootjs.pw.toml"
-hash = "3b7b23c07ab60d818286d5767e59375a9eafdd52fbfb8d6e2e14fcc79df5a584"
 metafile = true
 
 [[files]]
 file = "mods/luckperms.pw.toml"
-hash = "91e6a0e562023e927ca1c56bdfd5df673609cac23528f768a83afe3674cdd0c0"
 metafile = true
 
 [[files]]
 file = "mods/mech-trowel.pw.toml"
-hash = "c7fbb8433bdafc4fc173258f4ed9309352e339ccab1545982b833bc5c3502405"
 metafile = true
 
 [[files]]
 file = "mods/refined-storage-emi-integration.pw.toml"
-hash = "a2a356d7cc231749388a54cd6a6b1076d59ffb668ac3fe20d4dc57d73d56aefd"
 metafile = true
 
 [[files]]
 file = "mods/sculk-muffler.pw.toml"
-hash = "606300dd94af7d24d040d290bf4c27b8b7ea348218576519e9cefaa01f6b8b78"
 metafile = true
 
 [[files]]
 file = "mods/sdlink.pw.toml"
-hash = "ac3aecaa7398c0b9dcb46abdaa1826562ea1494de43c740b6c7a8d5abd139420"
 metafile = true
 
 [[files]]
 file = "mods/tectonic.pw.toml"
-hash = "63aea16cbf3e00874a05889f1553f3ef4640b04d10c370bba78eb2377f4fbf07"
 metafile = true
