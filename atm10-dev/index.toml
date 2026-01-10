@@ -131,6 +131,10 @@ file = "kubejs/server_scripts/puffercoin_recipes.js"
 file = "kubejs/startup_scripts/puffercoin.js"
 
 [[files]]
+file = "mods/advanced-loot-info.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/bluemap.pw.toml"
 metafile = true
 
