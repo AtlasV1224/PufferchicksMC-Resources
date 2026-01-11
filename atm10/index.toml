@@ -191,6 +191,10 @@ file = "mods/hooked.pw.toml"
 metafile = true
 
 [[files]]
+file = "mods/immersive-paintings.pw.toml"
+metafile = true
+
+[[files]]
 file = "mods/librarianlib.pw.toml"
 metafile = true
 
