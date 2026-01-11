@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "chaos_arena:block/waystone" }
+  }
+}
