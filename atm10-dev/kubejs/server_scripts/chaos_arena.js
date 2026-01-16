@@ -184,11 +184,43 @@ function rightClickWaystone(event) {
     // Update cooldown
     Server.persistentData.putInt(`${COOLDOWN_KEY}_${waystone.dest}`, daysNow);
     
-    // Teleport nearby players
-    Server.players
-      .filter(player => player.level.dimension == 'minecraft:the_end' && isInRange(waystone.pos, { x: player.x, y: player.y, z: player.z }))
-      .forEach(player => enterArena(Server, player, waystone.dest));
+    // Preload the destination chunk
+    let chunkX = Math.floor(arena.pos.x / 16);
+    let chunkZ = Math.floor(arena.pos.z / 16);
+    Server.runCommandSilent(`execute in minecraft:the_end run forceload add ${chunkX} ${chunkZ}`);
+  
+    // Respawn the dragon
+    Server.runCommandSilent(`execute positioned ${arena.pos.x} ${arena.pos.y} ${arena.pos.z} in minecraft:the_end run respawn_draconic_guardian`);
+    
+    // Find nearby players
+    let players = Server.players.filter(player => player.level.dimension == 'minecraft:the_end' && isInRange(waystone.pos, { x: player.x, y: player.y, z: player.z }));
+    
+    // Countdown
+    let seconds = 3;
+    players.forEach(player => {
+      player.tell(Text.gold('The Chaos Guardian stirs...'));
+      player.tell(Text.yellow(`Teleporting to the arena in ${seconds} second(s)!`));
+    });
+    
+    for (let i = 1; i < seconds; i++) {
+      let remaining = seconds - i;
+      Server.scheduleInTicks(i * 20, () => {
+        players.forEach(player => {
+          player.tell(Text.yellow(`Teleporting to the arena in ${remaining} second(s)!`));
+        });
+      });
+    }
 
+    // Teleport nearby players
+    Server.scheduleInTicks(seconds * 20, () => {
+      players.forEach(player => enterArena(Server, player, waystone.dest));
+    });
+    
+    // Unforceload the chunks after some time
+    Server.scheduleInTicks((seconds + 30) * 20, () => {
+      Server.runCommandSilent(`execute in minecraft:the_end run forceload remove ${chunkX} ${chunkZ}`);
+    });
+    
     return;
   }
   
