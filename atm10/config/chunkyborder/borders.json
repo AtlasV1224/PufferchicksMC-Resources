@@ -3,8 +3,8 @@
     "world": "minecraft:overworld",
     "centerX": 0.0,
     "centerZ": 0.0,
-    "radiusX": 5008.0,
-    "radiusZ": 5008.0,
+    "radiusX": 7504.0,
+    "radiusZ": 7504.0,
     "shape": "square",
     "wrap": "none"
   },
@@ -19,6 +19,96 @@
   },
   "minecraft:the_end": {
     "world": "minecraft:the_end",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 5008.0,
+    "radiusZ": 5008.0,
+    "shape": "square",
+    "wrap": "none"
+  },
+  "aether:the_aether": {
+    "world": "aether:the_aether",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 5008.0,
+    "radiusZ": 5008.0,
+    "shape": "square",
+    "wrap": "none"
+  },
+  "allthemodium:mining": {
+    "world": "allthemodium:mining",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 7504.0,
+    "radiusZ": 7504.0,
+    "shape": "square",
+    "wrap": "none"
+  },
+  "allthemodium:the_beyond": {
+    "world": "allthemodium:the_beyond",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 7504.0,
+    "radiusZ": 7504.0,
+    "shape": "square",
+    "wrap": "none"
+  },
+  "allthemodium:the_other": {
+    "world": "allthemodium:the_other",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 5008.0,
+    "radiusZ": 5008.0,
+    "shape": "square",
+    "wrap": "none"
+  },
+  "deeperdarker:otherside": {
+    "world": "deeperdarker:otherside",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 5008.0,
+    "radiusZ": 5008.0,
+    "shape": "square",
+    "wrap": "none"
+  },
+  "eternal_starlight:starlight": {
+    "world": "eternal_starlight:starlight",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 5008.0,
+    "radiusZ": 5008.0,
+    "shape": "square",
+    "wrap": "none"
+  },
+  "iceandfire:dread_land": {
+    "world": "iceandfire:dread_land",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 5008.0,
+    "radiusZ": 5008.0,
+    "shape": "square",
+    "wrap": "none"
+  },
+  "the_bumblezone:the_bumblezone": {
+    "world": "the_bumblezone:the_bumblezone",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 5008.0,
+    "radiusZ": 5008.0,
+    "shape": "square",
+    "wrap": "none"
+  },
+  "twilightforest:twilight_forest": {
+    "world": "twilightforest:twilight_forest",
+    "centerX": 0.0,
+    "centerZ": 0.0,
+    "radiusX": 5008.0,
+    "radiusZ": 5008.0,
+    "shape": "square",
+    "wrap": "none"
+  },
+  "undergarden:undergarden": {
+    "world": "undergarden:undergarden",
     "centerX": 0.0,
     "centerZ": 0.0,
     "radiusX": 5008.0,

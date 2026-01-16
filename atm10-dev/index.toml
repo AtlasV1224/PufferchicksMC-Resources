@@ -35,6 +35,12 @@ file = "config/bluemap/core.conf"
 file = "config/bluemap/maps/world.conf"
 
 [[files]]
+file = "config/bluemap/maps/world_mining.conf"
+
+[[files]]
+file = "config/bluemap/maps/world_the_aether.conf"
+
+[[files]]
 file = "config/bluemap/maps/world_the_end.conf"
 
 [[files]]
@@ -42,6 +48,12 @@ file = "config/bluemap/maps/world_the_nether.conf"
 
 [[files]]
 file = "config/bluemap/maps/world_the_other.conf"
+
+[[files]]
+file = "config/bluemap/maps/world_twilight_forest.conf"
+
+[[files]]
+file = "config/bluemap/maps/world_undergarden.conf"
 
 [[files]]
 file = "config/bluemap/storages/sql.conf"
@@ -92,6 +104,18 @@ file = "config/supplementaries-common.toml"
 file = "config/tectonic.json"
 
 [[files]]
+file = "kubejs/assets/chaos_arena/blockstates/waystone.json"
+
+[[files]]
+file = "kubejs/assets/chaos_arena/models/block/waystone.json"
+
+[[files]]
+file = "kubejs/assets/chaos_arena/models/item/waystone.json"
+
+[[files]]
+file = "kubejs/assets/chaos_arena/textures/block/waystone.png"
+
+[[files]]
 file = "kubejs/assets/puffercoin/textures/item/coin_0.png"
 
 [[files]]
@@ -110,7 +134,13 @@ file = "kubejs/assets/puffercoin/textures/item/coin_4.png"
 file = "kubejs/assets/puffercoin/textures/item/coin_5.png"
 
 [[files]]
+file = "kubejs/client_scripts/chaos_arena.js"
+
+[[files]]
 file = "kubejs/client_scripts/puffercoin_tooltip.js"
+
+[[files]]
+file = "kubejs/server_scripts/chaos_arena.js"
 
 [[files]]
 file = "kubejs/server_scripts/misc_recipes.js"
@@ -126,6 +156,9 @@ file = "kubejs/server_scripts/puffercoin_loot.js"
 
 [[files]]
 file = "kubejs/server_scripts/puffercoin_recipes.js"
+
+[[files]]
+file = "kubejs/startup_scripts/chaos_arena.js"
 
 [[files]]
 file = "kubejs/startup_scripts/puffercoin.js"
