@@ -1,0 +1,13 @@
+name = "Bluemap x Minecolonies"
+filename = "Minecolonies.bluemap.zip"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/sKmsEjEH/versions/cXu77Hbw/Minecolonies.bluemap.zip"
+hash-format = "sha512"
+hash = "d2aa92be4666eab30b783561c5bfb66001103047b94e62fd05c2dc79526746e54e324ea146e0a8f0a7da43f55ffb3cef537e093e78ba7d771b4d28b95ee68e93"
+
+[update]
+[update.modrinth]
+mod-id = "sKmsEjEH"
+version = "cXu77Hbw"

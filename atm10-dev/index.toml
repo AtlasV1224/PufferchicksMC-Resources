@@ -56,6 +56,22 @@ file = "config/bluemap/maps/world_twilight_forest.conf"
 file = "config/bluemap/maps/world_undergarden.conf"
 
 [[files]]
+file = "config/bluemap/packs/bluemap-create-resource-pack.pw.toml"
+metafile = true
+
+[[files]]
+file = "config/bluemap/packs/bluemap-model-loader.pw.toml"
+metafile = true
+
+[[files]]
+file = "config/bluemap/packs/bluemap-x-minecolonies.pw.toml"
+metafile = true
+
+[[files]]
+file = "config/bluemap/packs/createentityaddon.pw.toml"
+metafile = true
+
+[[files]]
 file = "config/bluemap/storages/sql.conf"
 
 [[files]]

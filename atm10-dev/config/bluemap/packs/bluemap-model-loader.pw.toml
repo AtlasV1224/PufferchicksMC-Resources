@@ -1,0 +1,8 @@
+name = "BlueMapModelLoader"
+filename = "BlueMapModelLoaders-0.3.2.jar"
+side = "server"
+
+[download]
+url = "https://github.com/Uiniel/BlueMapModelLoaders/releases/download/v0.3.2/BlueMapModelLoaders-0.3.2.jar"
+hash-format = "sha256"
+hash = "71abc7ddbd11703a1cb243befce97f331461c8fc386e9ecedf52150c08bbab95"

@@ -1,0 +1,8 @@
+name = "createentityaddon"
+filename = "createentityaddon-1.1.1-5.13+.jar"
+side = "server"
+
+[download]
+url = "https://github.com/BeneHenke/BluemapCreateEntityAddon/releases/download/v.1.1.1/createentityaddon-1.1.1-5.13+.jar"
+hash-format = "sha256"
+hash = "5e7a84355ba57be248fdca34260021a762b0e97ecf952bc694c52295646b5123"
