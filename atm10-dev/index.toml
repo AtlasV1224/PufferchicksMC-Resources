@@ -1,7 +1,7 @@
 hash-format = "sha256"
 
 [[files]]
-file = "bluemap/mariadb-java-client-3-5-4-jar.pw.toml"
+file = "bluemap/mariadb-java-client.pw.toml"
 metafile = true
 
 [[files]]
