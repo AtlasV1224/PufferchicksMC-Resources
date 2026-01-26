@@ -356,7 +356,13 @@ file = "config/chunkyborder/config.json"
 file = "config/cristellib/dungeons_arise/structure_toggle_config.json5"
 
 [[files]]
+file = "config/ftbchunks-world.snbt"
+
+[[files]]
 file = "config/ftbchunksbluemap-common.toml"
+
+[[files]]
+file = "config/ftbessentials.snbt"
 
 [[files]]
 file = "config/iceandfire/iaf-common.json"

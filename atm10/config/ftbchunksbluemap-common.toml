@@ -7,7 +7,7 @@ ftbChunksEnabled = true
 #Default: 60000 (1 minute)
 # Default: 60000
 # Range: > 5000
-claimUpdateIntervalMs = 60000
+claimUpdateIntervalMs = 300000
 #How long to wait after server start before loading claims, in milliseconds.
 #This delay allows FTB Chunks to fully initialize and load saved claim data.
 #Increase this value if claims don't show up on server restart.
