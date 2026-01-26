@@ -29,6 +29,9 @@ file = "bluemap/web/js/map-icons.js"
 file = "bluemap/web/sql.php"
 
 [[files]]
+file = "config/alltheleaks.json"
+
+[[files]]
 file = "config/bluemap/core.conf"
 
 [[files]]
