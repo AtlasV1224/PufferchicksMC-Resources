@@ -241,7 +241,7 @@ function rightClickWaystone(event) {
         });
       });
       server.runCommandSilent(`lp user ${player.username} permission settemp chunkyborder.bypass.move true 1h replace`);
-      server.runCommandSilent(`lp user ${player.username} permission settemp chunkyborder.bypass.place true 1 replace`);
+      server.runCommandSilent(`lp user ${player.username} permission settemp chunkyborder.bypass.place true 1h replace`);
       server.runCommandSilent(`execute in minecraft:the_end run tp ${player.username} ${arena.pos.x} ${arena.pos.y} ${arena.pos.z}`);
     });
   });
