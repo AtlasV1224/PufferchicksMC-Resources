@@ -591,6 +591,9 @@ file = "kubejs/client_scripts/chaos_arena.js"
 file = "kubejs/client_scripts/puffercoin_tooltip.js"
 
 [[files]]
+file = "kubejs/server_scripts/admin_misc.js"
+
+[[files]]
 file = "kubejs/server_scripts/chaos_arena.js"
 
 [[files]]

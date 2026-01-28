@@ -1,12 +1,15 @@
+// Settings
 const CONFIG = {
   arenaRadius: 500,
   arenaCooldown: 7,
   waystoneRange: 8,
-  islandRadius: 6
+  islandRadius: 6,
+  defaultCooldown: 1768683600,
+  cooldownKey: 'chaos_arena_cooldown',
+  returnKey: 'chaos_arena_return'
 };
 
-const DEFAULT_COOLDOWN = 1768683600;
-
+// Arenas are the center of where the Chaos Guardian will spawn
 const ARENAS = {
   'n': {
     pos: { x: 0, y: 110, z: -10000 }
@@ -34,6 +37,7 @@ const ARENAS = {
   }
 };
 
+// Waystones teleport players to their target arenas
 const WAYSTONES = [
   {
     pos: { x: -25, y: 110, z: -4969 },
@@ -69,19 +73,22 @@ const WAYSTONES = [
   }
 ];
 
-const COOLDOWN_KEY = 'chaos_arena_cooldown';
-const RETURN_KEY = 'chaos_arena_return';
-
 // Utility functions
-const getNearbyWaystone = pos => WAYSTONES.find(waystone => isInRange(waystone.pos, pos));
-const getWaystoneByDest = dest => WAYSTONES.find(waystone => waystone.dest === dest);
+function getNearbyWaystone(pos) {
+  return WAYSTONES.find(waystone => isInRange(waystone.pos, pos));
+}
 
-const isInRange = (pos1, pos2) =>
-  Math.abs(pos1.x - pos2.x) <= CONFIG.waystoneRange &&
-  Math.abs(pos1.y - pos2.y) <= CONFIG.waystoneRange &&
-  Math.abs(pos1.z - pos2.z) <= CONFIG.waystoneRange;
+function getWaystoneByDest(dest) {
+  return WAYSTONES.find(waystone => waystone.dest === dest);
+}
 
-const isInArena = (pos, id) => {
+function isInRange(pos1, pos2) {
+  return Math.abs(pos1.x - pos2.x) <= CONFIG.waystoneRange &&
+    Math.abs(pos1.y - pos2.y) <= CONFIG.waystoneRange &&
+    Math.abs(pos1.z - pos2.z) <= CONFIG.waystoneRange;
+}
+
+function isInArena(pos, id) {
   const arena = ARENAS[id];
   if (!arena) return false;
   let dx = pos.x - arena.pos.x;
@@ -89,148 +96,160 @@ const isInArena = (pos, id) => {
   return Math.sqrt(dx * dx + dz * dz) <= CONFIG.arenaRadius;
 }
 
-const setBlock = (server, x, y, z, block) => {
+function setBlock(server, x, y, z, block) {
   server.runCommandSilent(`execute in minecraft:the_end run setblock ${x} ${y} ${z} ${block}`);
 }
 
-// Arena entry/exit functions
-function onEnterArena(server, player, id) {
-  console.log(`Entering arena: ${id} for player: ${player.username}`);
-  let x = player.x;
-  let y = player.y;
-  let z = player.z;
-  server.scheduleInTicks(100, () => {
-    player.persistentData.put(RETURN_KEY, {
-      arena: id,
-      x: x,
-      y: y,
-      z: z
-    });
+// Command handlers
+function commandResetAll(context) {
+  for (const id in ARENAS) {
+    context.source.server.persistentData.remove(`${CONFIG.cooldownKey}_${id}`);
+  }
+  context.source.sendSuccess(Text.green('Reset cooldowns for all arenas'), true);
+  return 1;
+}
+
+function commandResetArena(context, id) {
+  context.source.server.persistentData.remove(`${CONFIG.cooldownKey}_${id}`);
+  context.source.sendSuccess(Text.green(`Reset cooldown for arena: ${id}`), true);
+  return 1;
+}
+
+function commandCreateArena(context, id) {
+  const waystone = getWaystoneByDest(id);
+  if (!waystone) {
+    context.source.sendFailure(Text.red(`Waystone not found for arena: ${id}`));
+    return 0;
+  }
+  console.log(`Creating island for waystone: ${id}`);
+  generateIsland(context.source.server, waystone.pos);
+  context.source.sendSuccess(Text.green(`Generated island for waystone: ${id}`), true);
+  return 1;
+}
+
+function commandTpArena(context, id) {
+  const waystone = getWaystoneByDest(id);
+  if (!waystone) {
+    context.source.sendFailure(Text.red(`Waystone not found for arena: ${id}`));
+    return 0;
+  }
+  context.source.server.runCommandSilent(`execute in minecraft:the_end run tp ${context.source.entity.username} ${waystone.pos.x} ${waystone.pos.y} ${waystone.pos.z}`);
+  context.source.sendSuccess(Text.green(`Teleported to waystone for arena: ${id}`), true);
+  return 1;
+}
+
+// Event handlers
+let tickCounter = 0;
+function serverTick(event) {
+  const { server: server } = event;
+  if (server.tickCounter >= tickCounter) return;
+  tickCounter = server.tickCounter + 20;
+  server.players.forEach(player => {
+    const returnData = player.persistentData.get(CONFIG.returnKey);
+    if (!returnData?.arena) return;
+    if (player.level.dimension !== 'minecraft:the_end' || !isInArena(player.pos, returnData.arena)) {
+      console.log(`Exiting arena for player: ${player.username}`);
+      player.persistentData.remove(CONFIG.returnKey);
+      server.runCommandSilent(`lp user ${player.username} permission unsettemp chunkyborder.bypass.move`);
+      server.runCommandSilent(`lp user ${player.username} permission unsettemp chunkyborder.bypass.place`);
+      return;
+    }
   });
-  server.runCommandSilent(`chunky border bypass`);
 }
-
-function enterArena(server, player, id) {
-  const arena = ARENAS[id];
-  onEnterArena(server, player, id);
-  server.runCommandSilent(`execute in minecraft:the_end run tp ${player.username} ${arena.pos.x} ${arena.pos.y} ${arena.pos.z}`);
-};
-
-function onExitArena(server, player) {
-  console.log(`Exiting arena for player: ${player.username}`);
-  player.persistentData.remove(RETURN_KEY);
-  server.runCommandSilent(`chunky border bypass`);
-}
-
-function exitArena(server, player) {
-  const returnData = player.persistentData.get(RETURN_KEY);
-  if (!returnData?.arena) return;
-  onExitArena(server, player);
-  server.runCommandSilent(`execute in minecraft:the_end run tp ${player.username} ${returnData.x} ${returnData.y} ${returnData.z}`);
-};
 
 // Waystone interaction handler
 const waystoneDebouncer = {};
 function rightClickWaystone(event) {
-  const { player: Player, block: Block, server: Server } = event;
+  const { player: player, block: block, server: server } = event;
   let now = Math.floor(Date.now() / 1000); // Seconds since epoch
-  let last = waystoneDebouncer[Player.uuid] ?? 0;
-  waystoneDebouncer[Player.uuid] = now;
-  if (now - last < 2) return;
+  let last = waystoneDebouncer[player.uuid] ?? 0;
+  waystoneDebouncer[player.uuid] = now + 2;
+  if (now < last + 2) return;
   
   // Verify dimension
   if (event.level.dimension != 'minecraft:the_end') {
-    Player.tell(Text.red('This waystone only works in The End dimension!'));
+    player.tell(Text.red('This waystone only works in The End dimension!'));
     return;
   }
 
   // Verify nearby waystone
-  const waystone = getNearbyWaystone(Block.pos);
+  const waystone = getNearbyWaystone(block.pos);
   if (!waystone) {
-    Player.tell(Text.red('No waystone found nearby!'));
+    player.tell(Text.red('No waystone found nearby!'));
     return;
   }
   
-  // Entry waystone
   const arena = waystone.dest ? ARENAS[waystone.dest] : null;
-  if (arena) {
-    console.log(`Found entry waystone for arena: ${waystone.dest}`);
-    let daysNow = Math.floor(now / 86400); // Days since epoch
-    let cooldown = Server.persistentData.getInt(`${COOLDOWN_KEY}_${waystone.dest}`);
-    let daysLeft = CONFIG.arenaCooldown - (daysNow - cooldown);
+  if (!arena) {
+    return;
+  }
 
-    // Verify arena cooldown
-    if (daysLeft > 0) {
-      Player.tell(Text.red(`This arena is on cooldown for ${daysLeft} more days!`));
-      return;
-    }
-    
-    // Handle uninitialized cooldown
-    let timeLeft = DEFAULT_COOLDOWN - now;
-    if (cooldown === 0 && timeLeft > 0) {
-      if (timeLeft < 60) {
-        Player.tell(Text.red(`This arena is on cooldown for ${timeLeft} more seconds!`));
-        return;
-      }
+  console.log(`Found waystone for arena: ${waystone.dest}`);
+  let daysNow = Math.floor(now / 86400); // Days since epoch
+  let cooldown = server.persistentData.getInt(`${CONFIG.cooldownKey}_${waystone.dest}`);
+  let daysLeft = CONFIG.arenaCooldown - (daysNow - cooldown);
 
-      if (timeLeft < 3600) {
-        let minutes = Math.ceil(timeLeft / 60);
-        Player.tell(Text.red(`This arena is on cooldown for ${minutes} more minutes!`));
-        return;
-      }
-
-      let hours = Math.ceil(timeLeft / 3600);
-      Player.tell(Text.red(`This arena is on cooldown for ${hours} more hours!`));
-      return;
-    }
-    
-    console.log(`Teleporting players to arena: ${waystone.dest}`);
-
-    // Update cooldown
-    Server.persistentData.putInt(`${COOLDOWN_KEY}_${waystone.dest}`, daysNow);
-    
-    // Preload the destination chunk
-    let chunkX = Math.floor(arena.pos.x / 16);
-    let chunkZ = Math.floor(arena.pos.z / 16);
-    Server.runCommandSilent(`execute in minecraft:the_end run forceload add ${chunkX} ${chunkZ}`);
+  // Verify arena cooldown
+  if (daysLeft > 0) {
+    player.tell(Text.red(`This arena is on cooldown for ${daysLeft} more days!`));
+    return;
+  }
   
-    // Respawn the dragon
-    Server.runCommandSilent(`execute positioned ${arena.pos.x} ${arena.pos.y} ${arena.pos.z} in minecraft:the_end run respawn_draconic_guardian`);
-    
-    // Find nearby players
-    let players = Server.players.filter(player => player.level.dimension == 'minecraft:the_end' && isInRange(waystone.pos, { x: player.x, y: player.y, z: player.z }));
-    
-    // Countdown
-    let seconds = 3;
-    players.forEach(player => {
-      player.tell(Text.gold('The Chaos Guardian stirs...'));
-      player.tell(Text.yellow(`Teleporting to the arena in ${seconds} second(s)!`));
+  console.log(`Teleporting players to arena: ${waystone.dest}`);
+
+  // Update cooldown
+  server.persistentData.putInt(`${CONFIG.cooldownKey}_${waystone.dest}`, daysNow);
+  
+  // Preload the destination chunk
+  let chunkX = Math.floor(arena.pos.x / 16);
+  let chunkZ = Math.floor(arena.pos.z / 16);
+  server.runCommandSilent(`execute in minecraft:the_end run forceload add ${chunkX} ${chunkZ}`);
+
+  // Respawn the dragon
+  server.runCommandSilent(`execute positioned ${arena.pos.x} ${arena.pos.y} ${arena.pos.z} in minecraft:the_end run respawn_draconic_guardian`);
+  
+  // Find nearby players
+  let players = server.players.filter(player => player.level.dimension == 'minecraft:the_end' && isInRange(waystone.pos, { x: player.x, y: player.y, z: player.z }));
+  
+  // Countdown
+  let seconds = 3;
+  players.forEach(player => {
+    player.tell(Text.gold('The Chaos Guardian stirs...'));
+    player.tell(Text.yellow(`Teleporting to the arena in ${seconds} second(s)!`));
+  });
+  
+  for (let i = 1; i < seconds; i++) {
+    let remaining = seconds - i;
+    server.scheduleInTicks(i * 20, () => {
+      players.forEach(player => {
+        player.tell(Text.yellow(`Teleporting to the arena in ${remaining} second(s)!`));
+      });
     });
-    
-    for (let i = 1; i < seconds; i++) {
-      let remaining = seconds - i;
-      Server.scheduleInTicks(i * 20, () => {
-        players.forEach(player => {
-          player.tell(Text.yellow(`Teleporting to the arena in ${remaining} second(s)!`));
+  }
+
+  // Teleport nearby players
+  server.scheduleInTicks(seconds * 20, () => {
+    players.forEach(player => {
+      const { x: x, y: y, z: z } = player;
+      console.log(`Entering arena: ${waystone.dest} for player: ${player.username}`);
+      server.scheduleInTicks(100, () => {
+        player.persistentData.put(CONFIG.returnKey, {
+          arena: waystone.dest,
+          x: x,
+          y: y,
+          z: z
         });
       });
-    }
-
-    // Teleport nearby players
-    Server.scheduleInTicks(seconds * 20, () => {
-      players.forEach(player => enterArena(Server, player, waystone.dest));
+      server.runCommandSilent(`lp user ${player.username} permission settemp chunkyborder.bypass.move true 1h replace`);
+      server.runCommandSilent(`lp user ${player.username} permission settemp chunkyborder.bypass.place true 1 replace`);
+      server.runCommandSilent(`execute in minecraft:the_end run tp ${player.username} ${arena.pos.x} ${arena.pos.y} ${arena.pos.z}`);
     });
-    
-    // Unforceload the chunks after some time
-    Server.scheduleInTicks((seconds + 30) * 20, () => {
-      Server.runCommandSilent(`execute in minecraft:the_end run forceload remove ${chunkX} ${chunkZ}`);
-    });
-    
-    return;
-  }
+  });
   
-  // Exit waystone
-  exitArena(Server, Player);
+  // Unforceload the chunks after some time
+  server.scheduleInTicks((seconds + 30) * 20, () => {
+    server.runCommandSilent(`execute in minecraft:the_end run forceload remove ${chunkX} ${chunkZ}`);
+  });
 }
 
 // Island generation
@@ -275,80 +294,33 @@ function generateIsland(server, pos) {
   setBlock(server, 0, pos.y + 1, pos.z - CONFIG.islandRadius, 'minecraft:light[level=15]');
 }
 
-// Handle waystone interaction
+// Main
 BlockEvents.rightClicked('chaos_arena:waystone', rightClickWaystone);
-
-// Player monitoring
-let tickCounter = 0;
-ServerEvents.tick(event => {
-  const { server: Server } = event;
-  if (Server.tickCounter - tickCounter < 20) return;
-  tickCounter = Server.tickCounter;
-  Server.players
-    .forEach(player => {
-      const returnData = player.persistentData.get(RETURN_KEY);
-      if (!returnData?.arena) return;
-      if (player.level.dimension !== 'minecraft:the_end' || !isInArena(player.pos, returnData.arena)) {
-        onExitArena(Server, player);
-        return;
-      }
-    });
-});
-
-// Admin commands
+ServerEvents.tick(serverTick);
 ServerEvents.commandRegistry(event => {
-  const { commands: Commands, arguments: Arguments } = event;
-  event.register(Commands.literal('chaos_arena')
+  const { commands: commands, arguments: args } = event;
+  event.register(commands.literal('chaos_arena')
     .requires(source => source.hasPermission(2))
-    .then(Commands.literal('reset_all')
-      .executes(context => {
-        const server = context.source.server;
-        for (const id in ARENAS) {
-          server.persistentData.remove(`${COOLDOWN_KEY}_${id}`);
-        }
-        context.source.sendSuccess(Text.green('Reset cooldowns for all arenas'), true);
-        return 1;
-      }))
-    .then(Commands.literal('reset')
-      .then(Commands.argument('arena', Arguments.STRING.create(event))
-        .executes(context => {
-          const id = Arguments.STRING.getResult(context, 'arena');
-          const arena = ARENAS[id];
-          if (!arena) {
-            context.source.sendFailure(Text.red(`Arena not found: ${id}`));
-            return 0;
-          }
-          const server = context.source.server;
-          server.persistentData.remove(`${COOLDOWN_KEY}_${id}`);
-          context.source.sendSuccess(Text.green(`Reset cooldown for arena: ${id}`), true);
-          return 1;
-        })))
-    .then(Commands.literal('create')
-      .then(Commands.argument('arena', Arguments.STRING.create(event))
-        .executes(context => {
-          const id = Arguments.STRING.getResult(context, 'arena');
-          const waystone = getWaystoneByDest(id);
-          if (!waystone) {
-            context.source.sendFailure(Text.red(`Waystone not found for arena: ${id}`));
-            return 0;
-          }
-          console.log(`Creating island for waystone: ${id}`);
-          generateIsland(context.source.server, waystone.pos);
-          context.source.sendSuccess(Text.green(`Generated island for waystone: ${id}`), true);
-          return 1;
-        })))
-    .then(Commands.literal('tp')
-      .then(Commands.argument('arena', Arguments.STRING.create(event))
-        .executes(context => {
-          const id = Arguments.STRING.getResult(context, 'arena');
-          const waystone = getWaystoneByDest(id);
-          if (!waystone) {
-            context.source.sendFailure(Text.red(`Waystone not found for arena: ${id}`));
-            return 0;
-          }
-          const server = context.source.server;
-          server.runCommandSilent(`execute in minecraft:the_end run tp ${context.source.entity.username} ${waystone.pos.x} ${waystone.pos.y} ${waystone.pos.z}`);
-          context.source.sendSuccess(Text.green(`Teleported to waystone for arena: ${id}`), true);
-          return 1;
-        }))))
+    .then(
+      commands.literal('reset_all').executes(commandResetAll)
+    )
+    .then(
+      commands.literal('reset').then(
+        commands.argument('arena', args.STRING.create(event))
+          .executes(context => commandResetArena(context, args.STRING.getResult(context, 'arena')))
+      )
+    )
+    .then(
+      commands.literal('create').then(
+        commands.argument('arena', args.STRING.create(event))
+          .executes(context => commandCreateArena(context, args.STRING.getResult(context, 'arena')))
+      )
+    )
+    .then(
+      commands.literal('tp').then(
+        commands.argument('arena', args.STRING.create(event))
+          .executes(context => commandTpArena(context, args.STRING.getResult(context, 'arena')))
+      )
+    )
+  );
 });

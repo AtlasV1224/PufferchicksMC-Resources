@@ -14,7 +14,3 @@ name = "admin"
 [[permissions]]
   permission = "weight.10"
   value = true
-
-[[permissions]]
-  permission = "luckperms.autoop"
-  value = true
