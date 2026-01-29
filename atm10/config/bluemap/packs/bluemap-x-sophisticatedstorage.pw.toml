@@ -1,0 +1,13 @@
+name = "Bluemap x SophisticatedStorage"
+filename = "SophisticatedStorage.Bluemap.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/RL733VYx/versions/8SvqCLPg/SophisticatedStorage.Bluemap.zip"
+hash-format = "sha512"
+hash = "3f63050fc2445fa0237c323caefdba51c02175f7689cf444d814c9cf2c339df09f67770ffff57f161895af7e2d66e015ff12601d36795e821d3f83404dec47d9"
+
+[update]
+[update.modrinth]
+mod-id = "RL733VYx"
+version = "8SvqCLPg"

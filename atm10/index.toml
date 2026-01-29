@@ -59,6 +59,165 @@ file = "config/bluemap/maps/world_twilight_forest.conf"
 file = "config/bluemap/maps/world_undergarden.conf"
 
 [[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/LICENSE"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/README.md"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/blockColors.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/blockstates/backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/blockstates/copper_backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/blockstates/diamond_backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/blockstates/gold_backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/blockstates/iron_backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/blockstates/netherite_backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/backpack_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/backpack_core.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/backpack_l.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/backpack_l_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/backpack_lr.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/backpack_lr_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/backpack_r.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/backpack_r_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/copper_backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/copper_backpack_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/copper_backpack_l.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/copper_backpack_r.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/diamond_backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/diamond_backpack_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/diamond_backpack_l.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/diamond_backpack_l_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/diamond_backpack_lr.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/diamond_backpack_lr_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/diamond_backpack_r.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/diamond_backpack_r_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/gold_backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/gold_backpack_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/gold_backpack_l.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/gold_backpack_l_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/gold_backpack_lr.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/gold_backpack_lr_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/gold_backpack_r.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/gold_backpack_r_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/iron_backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/iron_backpack_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/iron_backpack_l.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/iron_backpack_l_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/iron_backpack_lr.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/iron_backpack_r.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/iron_backpack_r_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/netherite_backpack.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/netherite_backpack_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/netherite_backpack_l.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/netherite_backpack_l_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/netherite_backpack_lr.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/netherite_backpack_lr_bat.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/netherite_backpack_r.json"
+
+[[files]]
+file = "config/bluemap/packs/Bluemap-x-SophisticatedBackpacks/assets/sophisticatedbackpacks/models/block/netherite_backpack_r_bat.json"
+
+[[files]]
 file = "config/bluemap/packs/BluemapCreateResourcePack/assets/create/blockstates/adjustable_chain_gearshift.json"
 
 [[files]]
@@ -322,6 +481,10 @@ file = "config/bluemap/packs/bluemap-x-minecolonies.pw.toml"
 metafile = true
 
 [[files]]
+file = "config/bluemap/packs/bluemap-x-sophisticatedstorage.pw.toml"
+metafile = true
+
+[[files]]
 file = "config/bluemap/packs/chaos_arena/assets/chaos_arena/blockstates/waystone.json"
 
 [[files]]
@@ -426,6 +589,9 @@ file = "kubejs/client_scripts/chaos_arena.js"
 
 [[files]]
 file = "kubejs/client_scripts/puffercoin_tooltip.js"
+
+[[files]]
+file = "kubejs/server_scripts/admin_misc.js"
 
 [[files]]
 file = "kubejs/server_scripts/chaos_arena.js"
