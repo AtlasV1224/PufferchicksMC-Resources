@@ -594,9 +594,6 @@ file = "kubejs/client_scripts/puffercoin_tooltip.js"
 file = "kubejs/server_scripts/admin_misc.js"
 
 [[files]]
-file = "kubejs/server_scripts/chaos_arena.js"
-
-[[files]]
 file = "kubejs/server_scripts/misc_recipes.js"
 
 [[files]]
@@ -612,10 +609,13 @@ file = "kubejs/server_scripts/puffercoin_loot.js"
 file = "kubejs/server_scripts/puffercoin_recipes.js"
 
 [[files]]
-file = "kubejs/startup_scripts/chaos_arena.js"
+file = "kubejs/server_scripts/waystone.js"
 
 [[files]]
 file = "kubejs/startup_scripts/puffercoin.js"
+
+[[files]]
+file = "kubejs/startup_scripts/waystone.js"
 
 [[files]]
 file = "mods/advanced-loot-info.pw.toml"

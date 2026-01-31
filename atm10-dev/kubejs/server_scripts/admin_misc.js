@@ -1,5 +1,7 @@
 const $LuckPerms = Java.loadClass('net.luckperms.api.LuckPermsProvider');
 
+const RETURN_KEY = 'admin_return'
+
 // Utility functions
 function hasPermission(user, permission) {
   return user.getCachedData()
@@ -26,6 +28,13 @@ function commandStart(context) {
       context.source.sendError(Text.red('You shall not pass!'))
       return;
     }
+    player.persistentData.put(RETURN_KEY, {
+      x: player.x,
+      y: player.y,
+      z: player.z,
+      dimension: player.level.dimension,
+      creative: player.isCreative()
+    });
     server.runCommandSilent(`lp user ${player.username} permission settemp luckperms.autoop true 1h replace`);
     server.runCommandSilent(`gamemode spectator ${player.username}`);
     context.source.sendSuccess(Text.green('With great power comes great responsibility!'), true);
@@ -43,8 +52,16 @@ function commandStop(context) {
       context.source.sendError(Text.red('You shall not pass!'))
       return;
     }
+    const data = player.persistentData.get(RETURN_KEY);
+    const x = data.getDouble('x');
+    const y = data.getDouble('y');
+    const z = data.getDouble('z');
+    const dimension = data.getString('dimension');
+    const creative = data.getBoolean('creative');
+    const gamemode = creative ? 'creative' : 'survival';
     server.runCommandSilent(`lp user ${player.username} permission unsettemp luckperms.autoop`);
-    server.runCommandSilent(`gamemode survival ${player.username}`);
+    server.runCommandSilent(`execute in ${dimension} run tp ${player.username} ${x} ${y} ${z}`);
+    server.runCommandSilent(`gamemode ${gamemode} ${player.username}`);
     context.source.sendSuccess(Text.green('Welcome back to the normie world!'), true);
   }).exceptionally(error => {
     context.source.sendError(Text.red('An error occurred while checking permissions.'));
@@ -74,9 +91,9 @@ ServerEvents.commandRegistry(event => {
   const { commands: commands, arguments: args } = event;
   event.register(commands.literal('sudo')
     .then(commands.literal('start')
-      .executes(commandStart))
+      .executes(context => commandStart(context)))
     .then(commands.literal('stop')
-      .executes(commandStop))
+      .executes(context => commandStop(context)))
     .then(commands.literal('spark')
       .executes(context => commandSpark(context, 50))
       .then(commands.argument('ticks', args.INTEGER.create(event))
