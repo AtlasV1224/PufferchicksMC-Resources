@@ -549,6 +549,9 @@ file = "config/simple-discord-link/simple-discord-compat.toml"
 file = "config/simple-discord-link/simple-discord-link.toml"
 
 [[files]]
+file = "config/structurize-server.toml"
+
+[[files]]
 file = "config/supplementaries-common.toml"
 
 [[files]]
