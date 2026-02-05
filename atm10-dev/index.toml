@@ -717,10 +717,6 @@ file = "mods/mech-trowel.pw.toml"
 metafile = true
 
 [[files]]
-file = "mods/refined-storage-emi-integration.pw.toml"
-metafile = true
-
-[[files]]
 file = "mods/schematic-energistics.pw.toml"
 metafile = true
 
